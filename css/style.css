@@ -1,0 +1,80 @@
+body {
+	background-image: url('../img/caphill.jpg');
+	background-size: cover;
+}
+
+header {
+    position: relative;
+    float: left;
+    left: 12em;
+}
+
+#title-text {
+	color: orange;
+	font-family: 'Exo 2';
+	font-weight: bolder;
+	font-size: 40px;
+}
+
+.player-one {
+	position: relative;
+	float: left;
+	top: 20em;
+	color: orange;
+	font-weight: bold;
+	font-family: impact;
+}
+
+.player-two {
+	position: relative;
+	float: left;
+	top: 25em;
+	left: -4em;
+	color: orange;
+	font-weight: bold;
+	font-family: impact;
+}
+
+.gameboard {
+    float: left;
+    position: relative;
+    left: 18em;
+    top: 2em;
+    height: 700px;
+    width:700px;
+}
+
+.gamecard {
+	height: 150px;
+	width: 100px;
+	padding: 5px;
+}
+
+.row-centered {
+	text-align: center;
+	margin-top: 7px;
+}
+
+.col-centered {
+	display: inline-block;
+	float: none;
+	text-align: center;
+	margin-right: -4px;
+	margin-bottom: 5px;
+	margin-top: 5px;
+}
+
+#mario {
+	position: fixed;
+	left: 5px;
+	bottom: 305px;
+	height: 180px;
+	width: 200px;
+}
+
+#pipe {
+	position: fixed;
+	left: 5px;
+	bottom: 0;
+	height: 300px;
+}
