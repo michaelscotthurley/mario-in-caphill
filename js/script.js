@@ -1,60 +1,52 @@
 var cardDown = $('.front');
 var cardUp = $('.back');
 var cardDownImage = "<img src=../mario-in-caphill/img/carddown.png>"
-var playerOne = "Mario";
-var playerTwo = "Luigi";
+var cardsUp=[];
 
-var availableItems = ['../mario-in-caphill/img/rsz_beer.jpg', 
-					'../mario-in-caphill/img/rsz_beardcomb.jpg',
-					'../mario-in-caphill/img/rsz_1orca.jpg', 
-					'../mario-in-caphill/img/rsz_donuts.jpg', 
-					'../mario-in-caphill/img/rsz_coffee.jpg',
-					'../mario-in-caphill/img/rsz_tacos.jpg'];
+var availableItems = [{item: 'beer', imageLink: '../mario-in-caphill/img/rsz_beer.jpg'}, 
+					{item: 'beardcomb', imageLink: '../mario-in-caphill/img/rsz_beardcomb.jpg'},
+					{item: 'orca', imageLink: '../mario-in-caphill/img/rsz_1orca.jpg'}, 
+					{item: 'donuts', imageLink:	'../mario-in-caphill/img/rsz_donuts.jpg'}, 
+					{item: 'coffee'	, imageLink: '../mario-in-caphill/img/rsz_coffee.jpg'},
+					{item: 'tacos', imageLink:	'../mario-in-caphill/img/rsz_tacos.jpg'}];
 var combinedItems=[]
-var randomItems=[];
-var playerOneItems=[];
-var playerTwoItems=[];
+var firstCard = [];
+var secondCard = [];
 var playerTurn=1;
+var flipCounter = 0;
 
 $(document).ready(function() {
-
-combineItems();
-shuffleItems(combinedItems);
 
 $('#start-game').click(function() {
 	populateBoard();
 });
 
-$('#play-again').click(function() {
-	clearBoard();
-});
 
+//Starts game and populates a new board
 function populateBoard() {
-    cardDown.html(cardDownImage);
-    for (var i = 0; i < randomItems.length; i++)
+	combineItems();
+	shuffleItems(combinedItems);
+	cardDown.html(cardDownImage);
+    for (var i = 0; i < cardsUp.length; i++) {
 		cardUp.each(function (i) {
-		$(this).html("<img src=" + randomItems[i] + ">");	
+		$(this).html("<img src=" + cardsUp[i] + ">");	
 		});
-	playerSelection();
+	}
+	console.log(cardsUp);
 }
-
-function clearBoard() {
-	cardDown.html("");
-	cardUp.html("");
-}
-
 
 //function to pull two of each item from the available items
+//essentially this doubles each item in the array
 function combineItems() {
 	for (var i = 0; i < availableItems.length; i++) {
-			combinedItems.push(availableItems[i]);
-			combinedItems.push(availableItems[i]);
+			combinedItems.push(availableItems[i].imageLink);
+			combinedItems.push(availableItems[i].imageLink);
 	}
 		// console.log(combinedItems);
 		return combinedItems;
 }
 
-//function to randomize combined array contents
+//function to randomize the new array of items
 function shuffleItems(array) {
   var currentIndex = array.length, temporaryValue, randomIndex;
   while (0 !== currentIndex) {
@@ -64,21 +56,13 @@ function shuffleItems(array) {
     array[currentIndex] = array[randomIndex];
     array[randomIndex] = temporaryValue;
   }
-  randomItems = array;
-  return randomItems;
+  cardsUp = array;
+  return cardsUp;
 }
 
-function playerSelection() {
-	for (var i = 0; i < randomItems.length; i++) {
-		var flipCount = 0;
-		while (flipCount < 2) {
-			randomItems[i].click(function() {
-				randomItems[i].flip();
-				flipCount++
-			});
-		}
-	}
-}
-
+$('.gamecard').flip( {
+	trigger: "click",
+	axis: "y"
+});
 
 });

@@ -1,58 +1,71 @@
+@font-face {
+  font-family: 'Super Plumber Brothers';
+  src: url('../supermario.ttf');
+}
+
 body {
 	background-image: url('../img/caphill.jpg');
 	background-size: cover;
 }
 
-header {
+#title-container {
     position: relative;
     float: left;
-    left: 12em;
+    left: 18em;
+    top: 1em;
+    text-align: center;
+    line-height: 100px;   
 }
 
 #title-text {
-	color: orange;
-	font-family: 'Exo 2';
-	font-weight: bolder;
+	color: #FFFFCC; 
+	background-color: red;
+	font-family: 'Super Plumber Brothers';
+	font-size: 60px;
+	text-shadow: 3px 3px 3px black;
+}
+
+.buttons {
+	position: absolute;
+	left: 70px;
+	top: 150px;
+}
+
+#start-game {
+	height: 60px;
+	font-family: 'Super Plumber Brothers', CenturyGothic, AppleGothic, sans-serif;
+	letter-spacing: 3px;
 	font-size: 40px;
-}
-
-.player-one {
-	position: relative;
-	float: left;
-	top: 20em;
-	color: orange;
-	font-weight: bold;
-	font-family: impact;
-}
-
-.player-two {
-	position: relative;
-	float: left;
-	top: 25em;
-	left: -4em;
-	color: orange;
-	font-weight: bold;
-	font-family: impact;
+	display: block;
+	padding: 10px 15px;
+    background: gray;
+    color: #FFFFCC;
+    text-shadow: 3px 3px 3px black;
 }
 
 .gameboard {
     float: left;
     position: relative;
-    left: 18em;
-    top: 2em;
-    height: 700px;
+    left: 16em;
+    top: 3em;
+    height: 575px;
     width:700px;
+    border: 1px solid red;
 }
 
 .gamecard {
 	height: 150px;
 	width: 100px;
-	padding: 5px;
+}
+
+.gamecard img:hover {
+	border: 5px solid orange;
+
 }
 
 .row-centered {
 	text-align: center;
-	margin-top: 7px;
+	margin-top: 20px;
 }
 
 .col-centered {
