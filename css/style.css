@@ -14,6 +14,7 @@ body {
     left: 18em;
     top: 1em;
     text-align: center;
+    width: 880px;
     line-height: 100px;   
 }
 
@@ -36,6 +37,18 @@ body {
 	font-family: 'Super Plumber Brothers', CenturyGothic, AppleGothic, sans-serif;
 	letter-spacing: 3px;
 	font-size: 40px;
+	display: block;
+	padding: 10px 15px;
+    background: gray;
+    color: #FFFFCC;
+    text-shadow: 3px 3px 3px black;
+}
+
+#instructions {
+	height: 50px;
+	font-family: 'Super Plumber Brothers', CenturyGothic, AppleGothic, sans-serif;
+	letter-spacing: 3px;
+	font-size: 35px;
 	display: block;
 	padding: 10px 15px;
     background: gray;
