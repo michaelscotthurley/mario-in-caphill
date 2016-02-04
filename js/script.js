@@ -89,8 +89,8 @@ $('div.gamecard .front').click(function() {
 		if (clickCounter % 2 !== 0) {
 			firstClick = $(this).siblings().html();
 			firstImage = $(this);
-			console.log(firstClick);
-			console.log(firstImage);
+			// console.log(firstClick);
+			// console.log(firstImage);
 		}
 		else {
 			secondClick = $(this).siblings().html();
@@ -104,11 +104,12 @@ $('div.gamecard .front').click(function() {
 					matches++ //counter to end game when all matches have been found
 					if ((playerTurn - 1) % 2 !== 0) {
 						playerOneScore++;
-						$('#playerTwo').text('LUIGI: ' + playerOneScore);
 					}
 					else {
 						playerTwoScore++;
 					}
+					$('#mario-score').text('MARIO: ' + playerTwoScore);
+					$('#luigi-score').text('LUIGI: ' + playerOneScore);
 					checkForWinner();//checks for winner after each match to see if game is complete
 					}
 				// console.log('Match!');
@@ -130,8 +131,12 @@ function checkForWinner() {
 	}	
 	else if (matches == 6 && playerTwoScore > playerOneScore) {
 		swal({   title: "Congratulations, Mario!",   text: "You won the game!",   imageUrl: "../mario-in-caphill/img/marioicon.png" });
-		console.log('Mario you win')
+		// console.log('Mario you win')
+	}
+	else if (matches == 6 && playerTwoScore == playerOneScore) {
+		swal({   title: "Sorry, gentlemen!",   text: "This game is a tie.",   imageUrl: "../mario-in-caphill/img/marioandluigi.jpg" });
 	}
 }
+$('.player')
 
 });
