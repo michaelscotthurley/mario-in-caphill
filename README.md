@@ -4,4 +4,4 @@ My game uses a gameboard and theme designed in HTML and styled with CSS. I used 
 
 You can play the game here:
 
-http://michaelhurley.github.io/mario-in-caphill
+http://michaelscotthurley.github.io/mario-in-caphill
