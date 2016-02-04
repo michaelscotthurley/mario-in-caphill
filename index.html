@@ -3,73 +3,78 @@
 <head>
 	<title>Super Mario Bros: Lost in Capitol Hill</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-	<link href='https://fonts.googleapis.com/css?family=Exo+2' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"> 
+	<link rel="stylesheet" type="text/css" href="css/sweetalert.css">
 </head>
-<body>
+<body> 
 	<div id="title-container">
-		<div id="title-text">SUPER MARIO BROS: LOST IN CAPITOL HILL</div>
+			<div id="title-text">SUPER MARIO BROS: LOST IN CAPITOL HILL</div>
 	</div>
 	<div class="buttons">
-		<button id="start-game">START GAME</button><br>
-		<button id="instructions">INSTRUCTIONS</button>
+			<button id="new-game">NEW GAME</button><br>
+			<button id="instructions">INSTRUCTIONS</button>
 	</div>
-	<div class="container"> 
+	<div class="scoreboard">
+			<div class="both-players" id="player-one">MARIO:</div>
+			<div class="both-players" id="player-two">LUIGI: </div>
+	</div>
+	<div class="container">
 		<div class="gameboard">	
 			<div class="row row-centered">
-				<div class="col-md-3 col-centered gamecard" id="card1">
+				<div class="col-md-3 col-centered gamecard">
 					<div class="front" id="front"> </div>
 					<div class="back" id="back"> </div>
 				</div>
-				<div class="col-md-3 col-centered gamecard" id="card2">
+				<div class="col-md-3 col-centered gamecard">
 					<div class="front"> </div>
-					<div class="back"> </div>
+					<div class="back"> </div>					
 				</div> 
-				<div class="col-md-3 col-centered gamecard" id="card3">
+				<div class="col-md-3 col-centered gamecard">
 					<div class="front"> </div>
 					<div class="back"> </div>
 				</div>
-				<div class="col-md-3 col-centered gamecard" id="card4">
+				<div class="col-md-3 col-centered gamecard">
 					<div class="front"> </div>
 					<div class="back"> </div>
 				</div>
 			</div>
 			<div class="row row-centered">
-				<div class="col-md-3 col-centered gamecard" id="card5">
+				<div class="col-md-3 col-centered gamecard">
+					<div class="front" id="front"> </div>
+					<div class="back" id="back"> </div>
+				</div>
+				<div class="col-md-3 col-centered gamecard">
 					<div class="front"> </div>
-					<div class="back"> </div>
+					<div class="back"> </div>					
 				</div> 
-				<div class="col-md-3 col-centered gamecard" id="card6">
+				<div class="col-md-3 col-centered gamecard">
 					<div class="front"> </div>
 					<div class="back"> </div>
 				</div>
-				<div class="col-md-3 col-centered gamecard" id="card7">
-					<div class="front"> </div>
-					<div class="back"> </div>
-				</div>
-				<div class="col-md-3 col-centered gamecard" id="card8">
-					<div class="front"> </div>
-					<div class="back"> </div>
-				</div> 
-			</div>
-			<div class="row row-centered">
-				<div class="col-md-3 col-centered gamecard" id="card9">
-					<div class="front"> </div>
-					<div class="back"> </div>
-				</div>
-				<div class="col-md-3 col-centered gamecard" id="card10">
-					<div class="front"> </div>
-					<div class="back"> </div>
-				</div>
-				<div class="col-md-3 col-centered gamecard" id ="card11">
-					<div class="front"> </div>
-					<div class="back"> </div>
-				</div> 
-				<div class="col-md-3 col-centered gamecard" id="card12">
+				<div class="col-md-3 col-centered gamecard">
 					<div class="front"> </div>
 					<div class="back"> </div>
 				</div>
 			</div>
+			<div class="row row-centered">
+				<div class="col-md-3 col-centered gamecard">
+					<div class="front" id="front"> </div>
+					<div class="back" id="back"> </div>
+				</div>
+				<div class="col-md-3 col-centered gamecard">
+					<div class="front"> </div>
+					<div class="back"> </div>					
+				</div> 
+				<div class="col-md-3 col-centered gamecard">
+					<div class="front"> </div>
+					<div class="back"> </div>
+				</div>
+				<div class="col-md-3 col-centered gamecard">
+					<div class="front"> </div>
+					<div class="back"> </div>
+				</div>
+			</div>
+		</div>
 	</div>
 
 <img src="img/mario.png" class="img-responsive" id="mario">
@@ -77,8 +82,8 @@
 
 
 <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-<script type="text/javascript" src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
 <script src="https://cdn.rawgit.com/nnattawat/flip/v1.0.19/dist/jquery.flip.min.js"></script>
+<script src="js/sweetalert.min.js"></script>
 <script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>
